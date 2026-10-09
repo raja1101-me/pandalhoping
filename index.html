@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#c1121f">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>Kolkata Durga Puja 2026: Pandal-Hopping Routes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#1a1d4a;--mute:#555a85;--red:#c1121f;--gold:#e8a317;--panel:#f4f2fb;--line:#d9d5ea;--on-red:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12142e;--ink:#f3f1fa;--mute:#b3b6dc;--red:#ff5a5f;--gold:#ffc24b;--panel:#1d2050;--line:#363a7a;--on-red:#12142e}}
+:root[data-theme="dark"]{--bg:#12142e;--ink:#f3f1fa;--mute:#b3b6dc;--red:#ff5a5f;--gold:#ffc24b;--panel:#1d2050;--line:#363a7a;--on-red:#12142e}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "Hind Siliguri",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Trebuchet MS",sans-serif;margin:0;line-height:1.1}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px}
+header{border-top:14px solid var(--red);border-bottom:14px solid var(--red);position:relative;padding:34px 0 30px;background:var(--bg)}
+header::before,header::after{content:"";position:absolute;left:0;right:0;height:4px;background:var(--gold)}
+header::before{top:0}header::after{bottom:0}
+.bn{font-size:1.1rem;color:var(--red);font-weight:600}
+h1{font-size:clamp(2.2rem,7vw,4.2rem);font-weight:800;letter-spacing:-.02em;margin:6px 0 10px}
+.lede{max-width:56ch;color:var(--mute);margin:0}
+.dates{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.d{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:.9rem}
+.d b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.05rem}
+.d.hot{background:var(--red);color:var(--on-red);border-color:var(--red)}
+section{padding:36px 0 6px}
+h2{font-size:1.7rem;margin-bottom:14px}
+.at{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.at a{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.at a:focus-visible,.at a:hover{border-color:var(--red);outline:2px solid var(--red);outline-offset:2px}
+.at b{font-family:"Bricolage Grotesque",sans-serif}
+.at span{display:block;color:var(--mute);font-size:.88rem}
+.route{border:2px solid var(--ink);border-radius:18px;overflow:hidden;margin:22px 0;background:var(--bg)}
+.rh{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;background:var(--ink);color:var(--bg);padding:14px 18px}
+.rh h3{font-size:1.45rem}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--gold);color:#1a1d4a;border-radius:999px;padding:2px 12px;font-size:.85rem;font-weight:600}
+.rb{display:grid;grid-template-columns:1.1fr 1fr;gap:0}
+@media(max-width:700px){.rb{grid-template-columns:1fr}}
+.stops{list-style:none;margin:0;padding:18px 18px 18px 26px;position:relative}
+.stops::before{content:"";position:absolute;left:36px;top:34px;bottom:34px;border-left:3px dashed var(--red)}
+.stops li{position:relative;padding-right:30px;padding:5px 0 5px 30px}
+.stops li::before{content:"";position:absolute;left:0;top:11px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:4px solid var(--red)}
+.stops li .x{top:6px;right:0}
+.stops li:first-child::before,.stops li:last-child::before{background:var(--gold)}
+.stops b{font-weight:600}
+.stops small{display:block;color:var(--mute);font-size:.85rem;line-height:1.3}
+.info{background:var(--panel);padding:18px;display:grid;gap:12px;align-content:start}
+.info h4{margin:0 0 2px;font-family:"Bricolage Grotesque",sans-serif;font-size:1rem;color:var(--red)}
+.info p{margin:0;font-size:.95rem}
+.crowd{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:end;height:220px;border-bottom:3px solid var(--ink);padding:0 4px}
+.col{display:flex;flex-direction:column;justify-content:flex-end;height:100%;text-align:center}
+.bar{border-radius:8px 8px 0 0;background:var(--red);color:var(--on-red);font-size:.8rem;font-weight:600;padding-top:4px}
+.labels{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;text-align:center;font-size:.85rem;padding:6px 4px}
+.labels b{display:block;font-family:"Bricolage Grotesque",sans-serif}
+.note{color:var(--mute);font-size:.88rem;margin-top:8px}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.tip{border-left:6px solid var(--gold);background:var(--panel);padding:12px 14px;border-radius:0 12px 12px 0}
+.tip b{font-family:"Bricolage Grotesque",sans-serif;display:block}
+footer{margin-top:40px;border-top:14px solid var(--red);padding:20px 0 30px;color:var(--mute);font-size:.88rem}
+.eat{border-top:2px dashed var(--ink);padding:16px 18px 18px;background:var(--bg)}
+.eat h4{margin:0 0 10px;font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem}
+.eg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.fc{border:2px solid var(--gold);border-radius:12px;padding:10px 12px;position:relative}
+.fk{display:inline-block;background:var(--gold);color:#1a1d4a;font-weight:600;font-size:.8rem;border-radius:6px;padding:0 8px;margin-bottom:4px}
+.fc b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.02rem;line-height:1.2}
+.fc .pl{color:var(--mute);font-size:.85rem}
+.fc .pr{color:var(--red);font-weight:600;margin-top:2px}
+.fc .nt{font-size:.82rem;color:var(--mute);line-height:1.3}
+.eat .src{font-size:.8rem;color:var(--mute);margin:8px 0 0}
+.x{position:absolute;top:6px;right:6px;border:0;background:var(--red);color:var(--on-red);width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:1rem;line-height:1}
+.add{margin-top:12px;border:2px dashed var(--red);border-radius:12px;padding:10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.add input,.add select{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);min-width:0}
+.add button,#bar button{font:inherit;font-weight:600;border:0;border-radius:8px;padding:7px 14px;background:var(--red);color:var(--on-red);cursor:pointer}
+#bar button.alt{background:var(--panel);color:var(--ink);border:1px solid var(--line)}
+#bar{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--bg);border-top:3px solid var(--red);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:center}
+#bar[hidden]{display:none}
+#msg{font-size:.9rem;color:var(--mute)}
+.dz{border:2px solid var(--ink);border-radius:14px;margin:12px 0;overflow:hidden}
+.dz summary{cursor:pointer;background:var(--ink);color:var(--bg);padding:12px 16px;font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem}
+.dz .in{padding:6px 16px 14px}
+.dz h5{margin:12px 0 6px;font-size:.9rem;color:var(--red);font-family:"Bricolage Grotesque",sans-serif}
+.pn{display:flex;flex-wrap:wrap;gap:6px}
+.pn span{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:1px 10px;font-size:.88rem}
+.mp{display:inline-block;margin-left:6px;background:var(--red);color:var(--on-red);text-decoration:none;font-size:.78rem;font-weight:600;border-radius:999px;padding:0 9px;line-height:1.5;vertical-align:middle}
+.mp:hover,.mp:focus-visible{outline:2px solid var(--gold)}
+#q{font:inherit;width:100%;padding:10px 12px;border:2px solid var(--ink);border-radius:10px;background:var(--bg);color:var(--ink)}
+.eh{margin:16px 0 8px;font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;color:var(--red)}
+</style>
+<script type="application/json" id="data">{"eats": {"north": [["Sweets and tea", "The Ghosh Cabin", "74 College Street", "About ₹100 for two", "Mithai counter, open 6:30 am to 9 pm"], ["Restaurant", "Zeeshan", "College Street", "About ₹400 for two", "North Indian, open 1 pm to 10 pm"], ["Fast food", "Mission Cafe", "Chandni Chowk", "About ₹250 for two", "Opens 10:30 am"]], "south": [["Cafe", "Hope Cafe", "Panditiya Road, Ballygunge", "About ₹250 for two", "Open 9 am to 5:30 pm, so go before your evening round"], ["Restaurant", "Indian Coffee House", "Ballygunge, near Bijon Setu", "About ₹600 for two", "The stretch pick of the four"], ["Fast food", "gr8! Rolls 'n' Wraps", "Rash Behari Avenue, Deshapriya Park", "About ₹350 for two", "Opens 10 am. Bawarchi Fast Food on Gariahat Road is similar"]], "central": [["Bakery and snacks", "The Rose", "Beliaghata", "About ₹300 for two", "Bakery counter"], ["Restaurant", "The Rose", "Kankurgachi", "About ₹600 for two", "Multicuisine"], ["Fast food", "Fast Filling", "Mani Square Mall, Kankurgachi", "About ₹400 for two", "Opens 10:30 am"]], "east": [["Cafe", "Bong House Cafe", "BD Block, Salt Lake Sector 1", "About ₹300 for two", "Coffee, fish fry and Chinese. Open till 10 pm"], ["Restaurant", "Cafe Memento", "Block A, Lake Town", "About ₹400 for two", "Chinese and continental, opposite the fire station"], ["Fast food", "Mission Cafe", "Hangout Food Court, City Centre 1", "About ₹250 for two", "Open 11:30 am to 10:30 pm"]]}, "stops": {"r1": [["Baghbazar Sarbojanin", "Traditional puja, running since 1919"], ["Nalin Sarkar Street", ""], ["Kashi Bose Lane", ""], ["Hatibagan Sarbojonin", "Best on Saptami and Ashtami evenings"], ["Sikdar Bagan", ""], ["Kumartuli Park", "Best on Ashtami evening"], ["Kumartuli Sarbojanin", ""], ["Ahiritola Sarbojonin", ""], ["Beniatola Sarbojonin", ""], ["Chaltabagan Lohapatty", ""], ["Simla Byayam Samity", ""], ["Muhammad Ali Park", "Very crowded. Best on Navami, midnight or later"], ["College Square", "Very crowded. Best on Navami night after 11 pm"]], "r2": [["Badamtala Ashar Sangha", ""], ["66 Pally", ""], ["Chetla Agrani", ""], ["Suruchi Sangha", "Very crowded"], ["Deshapriya Park", "Very crowded"], ["Tridhara Sammilani", ""], ["Ballygunge Cultural", ""], ["Singhi Park", ""], ["Ekdalia Evergreen", "Best on Ashtami and Navami evenings"], ["Bosepukur Sitala Mandir", ""], ["Mudiali", ""], ["Shib Mandir", ""]], "r3": [["Sovabazar Rajbari", "Household puja since 1757"], ["Chhatubabu Latubabu Bari", ""], ["Darjipara Mitra Bari", ""], ["Hatkhola Dutta Bari", ""], ["Jorasanko Daw Bari", "Short walk from the Metro"]], "r4": [["Sree Bhumi Sporting Club", "Very crowded. Expect a queue of about 2 hours"], ["Dumdum Park Bharat Chakra", ""], ["Dumdum Park Tarun Dal", ""], ["Tala Prattay", ""], ["Telengabagan", ""], ["Golaghata Sammilani", ""], ["Dakshindari Youth", ""], ["FD Block", ""], ["AE Block", ""], ["BJ Block", ""]], "r5": [["Janbazar Rajbari", "Rani Rashmoni's own family puja"], ["Taltala Sarbojanin", ""], ["Chakraberia Sarbojanin", ""], ["Bhowanipur 75 Pally", ""], ["68 Pally", ""], ["76 Pally", ""], ["Paddapukur Youth", ""], ["Harish Park", ""]], "r6": [["Deshapriya Park", "Very crowded"], ["Tridhara Sammilani", ""], ["Ballygunge Cultural", ""], ["Singhi Park", ""], ["Ekdalia Evergreen", "Best on Ashtami and Navami evenings"]], "r7": [["Badamtala Ashar Sangha", ""], ["66 Pally", ""], ["Chetla Agrani", ""], ["Suruchi Sangha", "Very crowded"], ["Maddox Square", "Very crowded. Go after 10 pm"]]}, "dir": {"North": {"Noapara": ["Noapara Udayan Sangha"], "Belgachia": ["Tala Barowari", "Tala Prattay", "Dakshinpara*", "Dumdum Park Bharat Chakra", "Dumdum Park Sarbajanin", "Dumdum Park Tarun Dal", "Golaghata Sammilani", "Dakshindari Youth", "Telengabagan", "Belgachia Sadharan Durgotsav", "Ultadanga Pallyshree", "Ultadanga Bidhan Sangha", "Ultadanga Karbagan", "Ultadanga Jagaran Sangha", "Dum Dum Park Yubak Brinda", "Dum Dum Park Tarun Sangha"], "Jessore Road": ["Arjunpur Amra Sabai Club*"], "Shyambazar": ["Baghbazar Sarbojanin", "Sikdar Bagan", "Hatibagan Nabinpally", "Nalin Sarkar Street", "Hatibagan Sarbojonin", "Kashi Bose Lane", "Lalabagan Nabankur", "Bagbazar Pally Puja", "Shyam Square", "Gouribari Sarbojanin"], "Shobhabazar Sutanuti": ["Sovabazar Rajbari", "Jagat Mukherjee Park", "Kumartuli Sarbojanin", "Kumartuli Park", "Beniatola Sarbojonin", "Ahiritola Sarbojonin", "Hatkhola Dutta Bari", "Sovabazar 9 Pally Sarbojanin", "Ahiritola Jubak Brinda"], "Girish Park": ["Jorasanko Sadharan", "Chorebagan Sarbojonin", "Simla Byayam Samity", "Chaltabagan Lohapatty", "Chhatubabu Latubabu Bari", "Darjipara Mitra Bari", "Jorasanko Daw Bari", "Darjipara Sarbojanin", "Pathuria Ghata 5 Pally"], "Dum Dum": ["Paikpara 15 Pally", "Bandhudal Sporting Club"], "Phoolbagan": ["Mitali Sangha"]}, "Central": {"MG Road": ["Muhammad Ali Park", "College Square", "Santosh Mitra Square", "Sealdah Athletic Club", "37 Pally", "Rammohan Sammilani"], "Central": ["Subodh Mallick Square", "Kapalitola Sarbajanin", "Badan Chand Roy Bari"], "Chandni Chowk": ["Janbazar Rajbari", "Taltala Sarbojanin"], "Rabindra Sadan": ["Chakraberia Sarbojanin", "Khidirpur 26 Pally", "Gokhale Sporting"], "Netaji Bhavan": ["68 Pally", "76 Pally", "Bhowanipur 75 Pally", "22 Pally (Northern Park)", "Paddapukur Youth", "Harish Park", "Agradut Udaya Sangha", "Swadhin Sangha", "Kidderpore 75 Pally", "Kidderpore 74 Pally", "Kidderpore 25 Pally", "Ray Street Sarbojanin", "Abasar"], "Beleghata": ["Pally Bashi Brindo", "Beleghata 33 Pally", "Beleghata Sandhani"], "Maidan": ["Park Circus"]}, "South": {"Jatin Das Park": ["23 Pally", "Forward Club", "Matri Mandir", "Bakul Bagan", "Maddox Square", "Ballygunge 21 Pally", "Rupchand Mukherjee Sarbojanin", "Golmath Durga Puja Samiti", "Bhowanipore Durgotsab", "Hazra Park Durgotsab", "Kalighat Milan Sangha", "Phalguni Sangha", "Sangha Sree", "Ballygunge Purba Pally", "64 Pally Durga Pujo"], "Kalighat": ["Suruchi Sangha", "Chetla Agrani", "66 Pally", "Badamtala Ashar Sangha", "Deshapriya Park", "Tridhara Sammilani", "Ballygunge Cultural", "Hindusthan Park", "Hindusthan Club", "Singhi Park", "Ekdalia Evergreen", "Bosepukur Sitala Mandir", "Rajdanga Naba Uday Sangha", "78 Pally", "Jana Mangal Samiti", "Dakshin Kolkata Sarbojanin", "Sarat Chatterjee Park", "Gariahat Sarbojanin Durgotsab", "Shahid Sangha", "Golden Arrow Club", "Adi Lake Palli Club", "Samaj Sebi Sangha", "Pratapaditya Road Trikon Park"], "Rabindra Sarobar": ["Shib Mandir", "Mudiali", "Jodhpur Park 95 Pally", "Sarodiya Sammilani", "Lake Avenue Sebak Sangha", "Dhakuria Sarbojanin", "Babubagan", "Nabapalli Sangha", "Lake Gardens Peoples Association", "Jodhpur Park Sarbojanin"], "Taratala": ["Behala Nutan Dal", "Sahapur Sarbojanin", "Parnashree Pally", "Naskarpur Sarbojanin", "Behala 29 Pally", "Behala Club", "Nandana Yuva Sangha"], "Behala Bazar": ["Behala Roy Bari", "Behala Nutan Sangha", "Behala Friends", "Netaji Sangha", "Agradut Club", "Mitra Sangha", "Behala 11 Pally", "Behala Shree Sangha", "Pragati Sangha"], "Behala Chowrasta": ["Nabalia Para United Club", "Barisha Netaji Sangha", "Bakultala Sarbojanin", "Barisha Nabin Sangha", "Sitalatala Kishore Sangha", "Barisha Tarun Tirtha"], "Mahanayak Uttam Kumar": ["Haridevpur 41 Pally", "Vivekananda Park", "Ajeya Sanghati", "Barisha Club", "Poddar Nagar Sarbojanin", "Atlanta Club", "Suktara Sangha"], "Netaji (Kudghat)": ["Naktala Pally Unnayan Samity", "Azadgarh Sebak Sangha*", "41 Pally", "Sodepur Pragati Sangha", "Putiary Club", "Pally Unnayan Samiti", "Vivekananda Sporting Club", "Adarsha Samiti", "Nabin Sathi Club"], "Masterda Surya Sen": ["Roynagar Unyan Samity", "Udayan Sangha", "Naktala Sammilani Club"], "Gitanjali": ["Naktala Udayan Sangha", "Baishnabghata Balak Samity", "Vidyasagar Central Club", "Sree Guru Sangha"], "Kavi Nazrul": ["Garia Nabadurga", "Tarun Sathi", "Shyama Pally", "Kamdahari Purbapara", "Garia Jatra Suru Sangha", "Kheyali Sangha", "Boral Sukanta Sangha"], "Shahid Khudiram": ["Patuli Sarbojanin", "Kendua Shanti Sangha"], "Kavi Subhash": ["Santoshpur Lake Pally", "Santoshpur Trikon Park", "Pally Mangal", "Santoshpur Avenue South"], "Majerhat": ["Kidderpore Pally Sarodiya", "Kidderpore Sarbojanin", "Alipore Sarbojanin"], "Joka": ["Diamond Park Sarbojanin"], "Jyotirindra Nath Nandi": ["Shahid Colony Sarbojanin", "Madhya Garfa Sarbojanin", "Mukundapur Sarbojanin", "Purbachal Shakti Sangha"], "Ritwik Ghatak": ["Adi Ballygunge Sarbojanin"], "Sakherbazar": ["Barisha Sarbojanin"], "Satyajit Ray": ["Rabindra Pally Sarbojanin"], "Thakurpukur": ["Udayan Pally", "SB Park Sarbojanin"], "VIP Bazar": ["Milan Tirtha", "Sunil Nagar Club", "Bosepukur Talbagan", "Deshbandhu Boys Club", "R K Chatterjee Sarbojanin", "Rajdanga Noboday Sangha", "Saraswati Sammilani", "Rajdanga Amra Kojon"]}, "East": {"Belgachia": ["Sree Bhumi Sporting Club"], "Karunamoyee": ["FD Block", "AE Block", "BJ Block", "Prafullakanan Paschim Adhibasi Brinda", "Masterda Smriti Sangha"], "Jessore Road": ["Aswininagar Bandhu Mahal", "Rail Pukur United Club", "Chinar Park Adhibasibrinda"], "Central Park": ["EC Block", "AK Block"], "Salt Lake Sector V": ["New Town Sarbojanin"]}, "Outside Kolkata": {"Howrah": ["Salkia Alapani"], "Howrah Maidan": ["Bantra Mohila Sangha", "Olaibibitola Sarbojanin", "Ichapur Shivaji Sangha"], "Kalyani Ghoshpara": ["Kalyani ITI More"]}}, "routes": [{"id": "r1", "t": "North Kolkata heritage", "time": "5 to 6 hrs", "n": "13 stops", "metro": "Shyambazar to MG Road", "d": "Baghbazar, the Hatibagan cluster, Kumartuli and a College Square finish."}, {"id": "r2", "t": "South Kolkata favourites", "time": "6 to 8 hrs", "n": "12 stops", "metro": "Kalighat to Rabindra Sarobar", "d": "Badamtala, Chetla and the Gariahat names, then Mudiali and Shib Mandir."}, {"id": "r3", "t": "Bonedi bari morning", "time": "3 to 4 hrs", "n": "5 stops", "metro": "Shobhabazar Sutanuti to Girish Park", "d": "Old household pujas. Respect private areas and ask before photographing."}, {"id": "r4", "t": "Sreebhumi and Salt Lake", "time": "4 to 5 hrs", "n": "10 stops", "metro": "Belgachia to Karunamoyee", "d": "Sree Bhumi, the Dumdum Park belt and three Salt Lake block pujas. Allow for queues and road transfers."}, {"id": "r5", "t": "Central Kolkata crossing", "time": "4 to 5 hrs", "n": "8 stops", "metro": "Chandni Chowk to Netaji Bhavan", "d": "Janbazar Rajbari, then south through Chakraberia to the Bhowanipore pujas near Netaji Bhavan Metro."}, {"id": "r6", "t": "Gariahat food crawl", "time": "3 to 4 hrs", "n": "5 stops", "metro": "Kalighat", "d": "Five big South names, with chops, rolls and phuchka between them."}, {"id": "r7", "t": "One night only", "time": "One evening", "n": "5 stops", "metro": "Kalighat to Jatin Das Park", "d": "The densest run of strong pandals per kilometre, ending at Maddox Square."}]}</script>
+</head>
+<body>
+<header><div class="wrap">
+<div class="bn">ঠাকুর দেখা</div>
+<h1>Pandal hopping, Kolkata 2026</h1>
+<p class="lede">Seven ready-made routes in visiting order, every pandal on the 2026 list, and budget eats for each area.</p>
+<div class="dates">
+<div class="d"><b>Sat 10 Oct</b>Mahalaya</div>
+<div class="d"><b>Fri 16 Oct</b>Shashthi</div>
+<div class="d"><b>Sat 17 Oct</b>Saptami</div>
+<div class="d hot"><b>18 or 19 Oct</b>Ashtami</div>
+<div class="d hot"><b>19 or 20 Oct</b>Navami</div>
+<div class="d"><b>Wed 21 Oct</b>Dashami in Bengal</div>
+</div></div></header>
+
+<main class="wrap" style="padding-bottom:90px">
+<section><h2>Pick your route</h2><div class="at" id="atlas"></div></section>
+<section id="routes"></section>
+<section><h2>Pocket-friendly eats</h2><div id="eats"></div></section>
+<section id="lsec" hidden><h2>Partner and affiliate links</h2><p class="note" id="lnote"></p><div id="links"></div></section>
+<section><h2>All pandals, by zone and Metro station</h2><p class="note" id="dcount"></p><input id="q" type="search" placeholder="Search a pandal, area or Metro station" aria-label="Search pandals"><div id="dir"></div></section>
+
+<section><h2>When the crowds come</h2>
+<div class="crowd">
+<div class="col"><div class="bar" style="height:30%">Light</div></div>
+<div class="col"><div class="bar" style="height:55%">Medium</div></div>
+<div class="col"><div class="bar" style="height:85%">Heavy</div></div>
+<div class="col"><div class="bar" style="height:100%">Heaviest</div></div>
+<div class="col"><div class="bar" style="height:25%">Light</div></div>
+</div>
+<div class="labels"><div><b>Shashthi</b>Best for big names</div><div><b>Saptami</b>Go early</div><div><b>Ashtami</b>Avoid nights</div><div><b>Navami</b>Avoid nights</div><div><b>Dashami</b>Immersion day</div></div>
+<p class="note">This is the usual pattern, not a forecast. Crowds peak after dark on the last weekend.</p></section>
+
+<section><h2>Pack and plan</h2>
+<div class="tips">
+<div class="tip"><b>Travel</b>Metro runs late during Puja and usually beats cars once diversions start. Use app cabs only for short hops.</div>
+<div class="tip"><b>Carry</b>Comfortable shoes, water, a power bank, a light raincoat, and a small bag. Large bags may be refused.</div>
+<div class="tip"><b>Eat</b>Rolls, phuchka and mughlai paratha. Community bhog is served on Ashtami and Navami at many pujas.</div>
+<div class="tip"><b>Check</b>Kolkata Police traffic advisories and local news for one-way pandal lanes and opening times.</div>
+</div></section>
+</main>
+<div id="bar" hidden></div>
+
+<footer><div class="wrap">Pandal list and route order follow KolkataKhoj (kolkatakhoj.com/pandals), read on 10 October 2026. Their list says Dakshinpara, Arjunpur Amra Sabai Club and Azadgarh Sebak Sangha may not be held in 2026. Check before you go. Ashtami and Navami dates differ by a day between panchangs. The food picks are not paid placements, and prices are approximate. Map buttons open a Google Maps search, and because pandals are temporary, the pin can be approximate. Confirm the exact spot on arrival.</div></footer>
+
+<script>
+var D=JSON.parse(document.getElementById("data").textContent),F=D.eats,S=D.stops,R=D.routes,DIR=D.dir,L=D.links||[],edit=false,art=null,dirty=false;
+var at=document.getElementById("atlas"),rt=document.getElementById("routes"),ea=document.getElementById("eats"),dr=document.getElementById("dir"),bar=document.getElementById("bar"),q=document.getElementById("q");
+var KINDS=["Cafe","Restaurant","Fast food","Sweets and tea","Bakery and snacks","Other"];
+var AREAS={north:"North Kolkata: College Street and Shobhabazar",south:"South Kolkata: Ballygunge and Deshapriya Park",central:"Central: Beliaghata and Kankurgachi",east:"East: Salt Lake and Lake Town"};
+var STN={};Object.keys(DIR).forEach(function(z){Object.keys(DIR[z]).forEach(function(k){DIR[z][k].forEach(function(n){STN[n.replace("*","")]=k})})});
+function esc(t){return String(t).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function mp(n,k){var s=k||STN[n]||"";var u="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(n+" Durga Puja pandal "+(s?s+" metro ":"")+"Kolkata");return '<a class="mp" href="'+u+'" target="_blank" rel="noopener" aria-label="Open '+esc(n)+' on Google Maps">Map</a>'}
+function fm(x){var u="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(x[1]+" "+x[2]+" Kolkata");return '<a class="mp" href="'+u+'" target="_blank" rel="noopener" aria-label="Open '+esc(x[1])+' on Google Maps">Map</a>'}
+function safe(u){try{var x=new URL(u);return(x.protocol==="https:"||x.protocol==="http:")?x.href:""}catch(e){return ""}}
+function drawLinks(){var lk=document.getElementById("links"),sec=document.getElementById("lsec");
+sec.hidden=!L.length&&!edit;
+var cards=L.map(function(x,i){var u=safe(x[2]);return '<div class="fc">'+(edit?'<button class="x xl" data-i="'+i+'" aria-label="Delete '+esc(x[0])+'">×</button>':'')+'<span class="fk">Affiliate link</span><b>'+esc(x[0])+'</b><div class="nt">'+esc(x[1])+'</div>'+(u?'<a class="mp" style="margin:6px 0 0" href="'+esc(u)+'" target="_blank" rel="sponsored nofollow noopener">Visit</a>':'')+'</div>'}).join('');
+var form=edit?'<div class="add"><input class="n" placeholder="Title, e.g. Book a cab"><input class="o" placeholder="Short description"><input class="u" placeholder="Link, starting with https://"><button class="addlink">Add link</button></div>':'';
+lk.innerHTML=(L.length?'<div class="eg">'+cards+'</div>':'<p class="note">No links yet. Add your first one below.</p>')+form;
+document.getElementById("lnote").textContent="Some links here are affiliate links. If you book or buy through them, the page owner may earn a commission at no extra cost to you.";}
+function draw(){
+at.innerHTML='';rt.innerHTML='';ea.innerHTML='';
+R.forEach(function(r,ri){
+at.innerHTML+='<a href="#'+r.id+'"><b>'+esc(r.t)+'</b><span>'+esc(r.time)+' · '+esc(r.n)+'</span></a>';
+var l=S[r.id]||[];
+var st=l.map(function(x,i){var sub=[STN[x[0]]?"Metro: "+STN[x[0]]:"",x[1]].filter(Boolean).join(" · ");return '<li>'+(edit?'<button class="x xs" data-r="'+r.id+'" data-i="'+i+'" aria-label="Delete '+esc(x[0])+'">×</button>':'')+'<b>'+esc(x[0])+'</b> '+mp(x[0])+(sub?'<small>'+esc(sub)+'</small>':'')+'</li>'}).join('');
+var sf=edit?'<div class="add" data-r="'+r.id+'"><input class="n" placeholder="Pandal name"><input class="o" placeholder="Note (optional)"><button class="addstop">Add pandal</button></div>':'';
+rt.innerHTML+='<article class="route" id="'+r.id+'"><div class="rh"><h3>'+(ri+1)+'. '+esc(r.t)+'</h3><div class="chips"><span class="chip">'+esc(r.time)+'</span><span class="chip">'+l.length+' stops</span></div></div><div class="rb"><div><ul class="stops">'+st+'</ul>'+sf+'</div><div class="info"><div><h4>Best for</h4><p>'+esc(r.d)+'</p></div><div><h4>Metro</h4><p>'+esc(r.metro)+'</p></div><div><h4>Order</h4><p>Stops are listed in visiting order, first to last.</p></div></div></div></article>';
+});
+at.innerHTML+='<a href="#eats"><b>Pocket-friendly eats</b><span>By area</span></a><a href="#lsec"><b>Partner links</b><span>Affiliate offers</span></a><a href="#dir"><b>All pandals</b><span>Search the full list</span></a>';
+Object.keys(AREAS).forEach(function(k){
+var list=F[k]||[];
+var cards=list.map(function(x,i){return '<div class="fc">'+(edit?'<button class="x" data-r="'+k+'" data-i="'+i+'" aria-label="Delete '+esc(x[1])+'">×</button>':'')+'<span class="fk">'+esc(x[0])+'</span><b>'+esc(x[1])+' '+fm(x)+'</b><div class="pl">'+esc(x[2])+'</div><div class="pr">'+esc(x[3])+'</div><div class="nt">'+esc(x[4])+'</div></div>'}).join('');
+var form=edit?'<div class="add" data-r="'+k+'"><select class="k">'+KINDS.map(function(y){return '<option>'+y+'</option>'}).join('')+'</select><input class="n" placeholder="Name"><input class="p" placeholder="Area or address"><input class="c" placeholder="Price, e.g. About ₹300 for two"><input class="o" placeholder="Note, e.g. hours"><button class="addbtn">Add listing</button></div>':'';
+ea.innerHTML+='<div class="eh">'+AREAS[k]+'</div><div class="eg">'+cards+'</div>'+form;
+});
+ea.innerHTML+='<p class="note">Prices are approximate listing figures. Check hours before you go, as Puja week timings change.</p>';
+drawLinks();
+}
+function drawDir(){
+var f=q.value.trim().toLowerCase(),tot=0,h='';
+Object.keys(DIR).forEach(function(z){
+var cnt=0,body='';
+Object.keys(DIR[z]).forEach(function(k){
+var ns=DIR[z][k].filter(function(n){return !f||n.toLowerCase().indexOf(f)>-1||k.toLowerCase().indexOf(f)>-1||z.toLowerCase().indexOf(f)>-1});
+if(!ns.length)return;cnt+=ns.length;
+body+='<h5>'+esc(k)+' ('+ns.length+')</h5><div class="pn">'+ns.map(function(n){return '<span>'+esc(n.replace("*",""))+(n.indexOf("*")>-1?' (may not be held in 2026)':'')+mp(n.replace("*",""),k)+'</span>'}).join('')+'</div>';
+});
+tot+=cnt;
+if(cnt)h+='<details class="dz"'+(f?' open':'')+'><summary>'+esc(z)+' ('+cnt+')</summary><div class="in">'+body+'</div></details>';
+});
+dr.innerHTML=h||'<p class="note">No pandal matches that search.</p>';
+document.getElementById("dcount").textContent=tot+' pandals'+(f?' match your search':' on the KolkataKhoj 2026 list. Open a zone to see them grouped by nearest Metro station.');
+}
+function msg(t){var m=document.getElementById("msg");if(m)m.textContent=t||""}
+function drawBar(m){
+bar.innerHTML='<button id="tg" class="'+(edit?'alt':'')+'">'+(edit?'Done editing':'Edit stops, food and links')+'</button>'+(dirty?'<button id="sv">Save to page</button><button id="ds" class="alt">Discard changes</button>':'')+'<span id="msg">'+(m||(edit?'Add or delete route stops, food listings and affiliate links. Changes go live only when you save.':''))+'</span>';}
+function onClick(e){
+var t=e.target;
+if(t.classList.contains("xl")){L.splice(+t.dataset.i,1);dirty=true;draw();drawBar();}
+else if(t.classList.contains("xs")){S[t.dataset.r].splice(+t.dataset.i,1);dirty=true;draw();drawBar();}
+else if(t.classList.contains("x")){F[t.dataset.r].splice(+t.dataset.i,1);dirty=true;draw();drawBar();}
+if(t.classList.contains("addlink")){var b3=t.parentNode,q3=function(c){return b3.querySelector("."+c).value.trim()};var u3=safe(q3("u"));if(!q3("n")||!u3){msg("Add a title and a full link starting with https://");return}L.push([q3("n"),q3("o"),u3]);dirty=true;draw();drawBar();}
+if(t.classList.contains("addstop")){var b2=t.parentNode,q2=function(c){return b2.querySelector("."+c).value.trim()};if(!q2("n")){b2.querySelector(".n").focus();return}S[b2.dataset.r].push([q2("n"),q2("o")]);dirty=true;draw();drawBar();}
+if(t.classList.contains("addbtn")){var b=t.parentNode,qq=function(c){return b.querySelector("."+c).value.trim()};if(!qq("n")){b.querySelector(".n").focus();return}F[b.dataset.r].push([qq("k"),qq("n"),qq("p"),qq("c"),qq("o")]);dirty=true;draw();drawBar();}
+}
+rt.addEventListener("click",onClick);ea.addEventListener("click",onClick);document.getElementById("links").addEventListener("click",onClick);
+q.addEventListener("input",drawDir);
+bar.addEventListener("click",async function(e){
+var id=e.target.id;
+if(id==="tg"){edit=!edit;draw();drawBar();}
+if(id==="ds"){D=JSON.parse(document.getElementById("data").textContent);F=D.eats;S=D.stops;L=D.links||[];dirty=false;draw();drawBar();}
+if(id==="sv"){
+msg("Saving…");
+try{
+var c=document.documentElement.cloneNode(true);
+["atlas","routes","eats","links","dir"].forEach(function(i){c.querySelector("#"+i).innerHTML=""});
+c.querySelector("#bar").innerHTML="";c.querySelector("#bar").setAttribute("hidden","");
+c.querySelector("#data").textContent=JSON.stringify({eats:F,stops:S,dir:D.dir,routes:D.routes,links:L});
+await art.publish("<!DOCTYPE html>\n"+c.outerHTML);
+}catch(err){
+if(err&&err.code==="conflict"){return}
+msg(err&&(err.code==="not_writer"||err.code==="not_granted")?"This view is read-only, so you can't save here.":"Could not save. Try again.");
+}}
+});
+draw();drawDir();
+(async function(){try{
+if(!window.claude)return;
+var u=await claude.use("user"),a=await claude.use("artifact");
+if(a&&u&&(await u.canEdit())){art=a;bar.hidden=false;drawBar();}
+}catch(e){}})();
+</script>
+<script>if("serviceWorker"in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}</script>
+</body>
+</html>
